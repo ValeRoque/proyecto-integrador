@@ -1,5 +1,6 @@
 📘 Proyecto Integrador – Unidad I
 Escenario Procedural con Animación de Cámara en Blender
+---
 1. Introducción
 
 El presente proyecto integrador tiene como objetivo aplicar los fundamentos de la graficación por computadora mediante la generación de un escenario tridimensional procedural utilizando Python en Blender.
@@ -20,7 +21,9 @@ Iluminación digital
 
 Generación procedural
 
+---
 2. Objetivo General
+---
 
 Desarrollar un escenario tridimensional procedural en Blender utilizando Python, incorporando animación de cámara a lo largo de un camino recto y curvo.
 
