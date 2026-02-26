@@ -21,8 +21,8 @@ Iluminación digital
 
 Generación procedural
 
-2. Objetivo General
 ---
+2. Objetivo General
 
 Desarrollar un escenario tridimensional procedural en Blender utilizando Python, incorporando animación de cámara a lo largo de un camino recto y curvo.
 
