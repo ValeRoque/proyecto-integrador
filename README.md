@@ -21,12 +21,12 @@ Iluminación digital
 
 Generación procedural
 
----
 2. Objetivo General
 ---
 
 Desarrollar un escenario tridimensional procedural en Blender utilizando Python, incorporando animación de cámara a lo largo de un camino recto y curvo.
 
+---
 3. Objetivos Específicos
 
 Generar estructuras 3D mediante código.
@@ -39,6 +39,7 @@ Implementar animación mediante keyframes.
 
 Integrar iluminación básica en la escena.
 
+---
 4. Marco Conceptual
 4.1 Generación Procedural
 
@@ -87,6 +88,7 @@ Rotación (rotation_euler)
 
 Blender interpola automáticamente entre estos puntos para generar movimiento fluido.
 
+---
 5. Desarrollo del Proyecto
 
 El proyecto se divide en las siguientes etapas:
@@ -109,6 +111,7 @@ Animación del recorrido
 
 La animación tiene una duración de 250 fotogramas, simulando aproximadamente 10 segundos de recorrido.
 
+---
 6. Resultados
 
 Se obtuvo un escenario tridimensional compuesto por:
