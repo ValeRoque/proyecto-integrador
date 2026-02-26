@@ -41,6 +41,7 @@ Integrar iluminación básica en la escena.
 
 ---
 4. Marco Conceptual
+
 4.1 Generación Procedural
 
 La generación procedural consiste en crear contenido digital utilizando algoritmos matemáticos en lugar de modelado manual.
