@@ -171,12 +171,14 @@ Además de generar el escenario, el script incorpora una animación en la que la
 
 Esto se logra mediante el uso de **keyframes**, que permiten definir posiciones específicas en determinados fotogramas.
 
-En el código se establecen dos posiciones principales:
-
 - **Frame 1:** La cámara inicia en la posición (0, -5, 2).
 - **Frame 120:** La cámara termina en la posición (0, 20, 2).
 
 Blender interpola automáticamente el movimiento entre estos dos puntos, creando un desplazamiento fluido a través del pasillo.
+
+### Vista de la animación
+
+![Animación de la cámara](animacion_camara.png)
 
 El rango de animación se configura con:
 
@@ -185,10 +187,7 @@ bpy.context.scene.frame_start = 1
 bpy.context.scene.frame_end = 120
 ```
 
-Esto define la duración total de la animación.
-
-Gracias a esta configuración, al presionar "Play" en la línea de tiempo, la cámara recorre el camino creado, simulando un recorrido dinámico dentro del escenario generado por código.
-
+Gracias a esta configuración, al reproducir la línea de tiempo, la cámara recorre el camino creado dentro del escenario.
 ---
 
 ## Conclusión
