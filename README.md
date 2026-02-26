@@ -1,24 +1,16 @@
-Introducción
+# PRACTICA - Generación de Escenario y Animación en Blender con Python
 
-En esta práctica se desarrolla un escenario procedural en Blender utilizando Python mediante la API bpy.
+## Introducción
 
-El proyecto consiste en generar automáticamente un pasillo compuesto por un tramo recto y un tramo curvo. Además, se implementa la animación de una cámara que recorre el camino de manera fluida, simulando un desplazamiento en primera persona.
+En esta práctica se desarrolla un script en Python utilizando la API `bpy` de Blender para generar automáticamente un escenario tipo pasillo y crear una animación de cámara.
 
-La construcción del tramo curvo se basa en cálculos trigonométricos utilizando funciones seno y coseno, lo que permite posicionar los objetos siguiendo una trayectoria circular precisa.
+El objetivo es aplicar programación para automatizar la creación de objetos, asignar materiales y generar movimiento mediante keyframes.
 
-Este proyecto integra conceptos de:
+---
 
-Generación procedural
+## Código en Python
 
-Transformaciones geométricas
-
-Trigonometría aplicada
-
-Animación por fotogramas clave (Keyframes)
-
-Iluminación 3D
-
-Código en Python
+```python
 import bpy
 import random
 import math
@@ -67,7 +59,6 @@ def generar_escenario():
         pared_der.scale = (0.2, 1, 2)
         pared_der.data.materials.append(mat_pared_a)
 
-
     # -----------------------------------
     # CREAR CÁMARA
     # -----------------------------------
@@ -92,3 +83,90 @@ def generar_escenario():
 
 # Ejecutar función
 generar_escenario()
+```
+
+---
+
+## Resultado en Blender
+
+![Escenario animado](escenario_animado.png)
+
+---
+
+## Explicación del Código
+
+### 1. Importación de librerías
+
+- `bpy`: Permite controlar Blender mediante Python.
+- `random`: Permite generar valores aleatorios (aunque en este script no se usa directamente).
+- `math`: Se utiliza para trabajar con ángulos en radianes.
+
+---
+
+### 2. Función crear_material()
+
+Esta función genera un material con:
+
+- Color base RGB
+- Nivel de rugosidad (Roughness)
+
+Se utiliza el nodo **Principled BSDF**, que es el shader estándar en Blender.
+
+---
+
+### 3. Función generar_escenario()
+
+Esta función construye todo el entorno automáticamente.
+
+#### Limpieza de escena
+Se eliminan todos los objetos existentes para comenzar desde cero.
+
+#### Creación de materiales
+Se crean materiales para las paredes del pasillo.
+
+#### Parámetros
+- `largo_pasillo`: Número de segmentos del pasillo.
+- `ancho_pasillo`: Separación entre paredes.
+- `radio_curva`: Variable preparada para futuras expansiones.
+
+---
+
+### 4. Creación del tramo recto
+
+Se utiliza un ciclo `for` que repite la creación de cubos.
+
+Cada iteración:
+
+- Crea una pared izquierda.
+- Crea una pared derecha.
+- Ajusta su escala.
+- Asigna material.
+
+Esto genera un pasillo largo y simétrico.
+
+---
+
+### 5. Creación de la cámara
+
+Se añade una cámara y se rota 75 grados en el eje X para apuntar hacia el pasillo.
+
+Se establece como cámara activa de la escena.
+
+---
+
+### 6. Animación
+
+Se insertan keyframes:
+
+- Frame 1 → posición inicial
+- Frame 120 → posición final
+
+La cámara se mueve automáticamente a lo largo del pasillo creando una animación.
+
+---
+
+## Conclusión
+
+Este ejercicio demuestra cómo la programación en Blender permite automatizar la creación de escenarios y generar animaciones mediante keyframes.
+
+La combinación de estructuras de control, funciones y parámetros facilita la construcción de escenas dinámicas sin necesidad de modelado manual.
