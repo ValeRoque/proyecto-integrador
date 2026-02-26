@@ -89,7 +89,7 @@ generar_escenario()
 
 ## Resultado en Blender
 
-![Escenario animado](escenario_animado.png)
+![Escenario animado](escenario animado.png)
 
 ---
 
